@@ -373,9 +373,9 @@ cbind(summary(lm_mental)$r.squared, summary(lm_test)$r.squared, summary(lm_test2
 anova(lm_test4, lm_mental)
 anova(lm_test5, lm_mental)
 
-fit_mental <- lm_test4$fitted.values
-resid_mental <- lm_test4$residuals
-sresid_mental <- rstandard(lm_test4)
+fit_mental <- lm_mental$fitted.values
+resid_mental <- lm_mental$residuals
+sresid_mental <- rstandard(lm_mental)
 
 # Linearity Check
 par(mfrow = c(1,3), mar=c(3,3,2,1), mgp = c(1.8,.5, 0))
